@@ -23,7 +23,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  y = 400;
+  y = height*0.7;
   ySpeed = 0;
 }
 
@@ -35,8 +35,8 @@ function draw() {
   ySpeed += gravity;
   y += ySpeed;
   
-  if (y > 400) {
-  y = 400;
+  if (y > height*0.7) {
+  y = height*0.7;
   ySpeed *= -0.5; // Fazer a bola "quicar" ao chegar no chão
   isOnGround = true;
   } else {
