@@ -23,7 +23,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  y = 600;
+  y = 400;
   ySpeed = 0;
 }
 
@@ -35,8 +35,8 @@ function draw() {
   ySpeed += gravity;
   y += ySpeed;
   
-  if (y > 600) {
-  y = 600;
+  if (y > 400) {
+  y = 400;
   ySpeed *= -0.5; // Fazer a bola "quicar" ao chegar no chão
   isOnGround = true;
   } else {
@@ -47,8 +47,8 @@ function draw() {
 
 function moveBgImg() {
   
-  image(bgImg, xBg, 0, 1280, 850)
-  image(bgImg, xBg + 1280, 0, 1280, 850)
+  image(bgImg, xBg, 0, width, height)
+  image(bgImg, xBg + width, 0, width, height)
   
   xBg -= 1
   if (xBg <= - width) {
